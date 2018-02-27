@@ -1,0 +1,35 @@
+<style>
+
+body
+{
+	font-family: Arial;
+}
+
+header
+{
+	border: 1px solid black;
+}
+
+.navigationButton
+{
+	border: 1px solid black;
+	border-radius: 1em;
+	height: 3em;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+
+#listNavigation
+{
+	border: 1px solid black;
+	text-align: center;
+}
+
+#listTypeSelector
+{
+	border: 1px;
+	margin: 0.5em;	
+}
+
+</style>
