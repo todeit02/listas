@@ -1,18 +1,14 @@
 $(function(){
-	console.log("Starting lists.json request.");
-	var listsFileLoader = new XMLHttpRequest();
-	listsFileLoader.onload = parseListsJson;
-    listsFileLoader.open("GET", "lists.json");
-	console.log("lists.json request started.");
+	$.get("lists.json", parseListsJson(data));
 	
 	$("#listCollectionContainer").load("list.html", loadListContent);
 	$("#listCollectionContainer").load("list.html", loadListContent);
 });
 
-function parseListsJson()
+function parseListsJson(string)
 {
-	console.log("Parsing lists.");
-	var listContainer = JSON.parse(this.responseText); 
+	console.log(string);
+	var listContainer = JSON.parse(string); 
 	listContainer.lists.forEach(function(list)
 	{
 		console.log(list.name);
