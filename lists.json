@@ -41,6 +41,48 @@
 					"quantity": "3 L"
 				}
 			]
+		},
+		{
+			"name": "Víveres del sábado 2",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800 g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000 g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5"
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 2",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7 L"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3 L"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5 L"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3 L"
+				}
+			]
 		}
 	]
 }

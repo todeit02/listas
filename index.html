@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Lista de Compras Conectada</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
@@ -28,19 +28,21 @@
 					<button type="button" class="btn btn-warning">Proprias</button>
 					<button type="button" class="btn btn-warning">Extranjeras</button>
 				</div> 
-				<button class="navigationButton roundedBorder">
-					<i class="fas fa-plus-circle fa-2x"></i>
-				</button>
-				<div>
-					<!-- AJAX fill list names here -->
-					<!-- dummy content -->
-					<button class="navigationButton roundedBorder">Mi lista 1</button>
+				<div class="navigationItemContainer">
+					<button class="navigationButton roundedBorder">
+						<i class="fas fa-plus-circle fa-2x"></i>
+					</button>
+				</div>
+				<div id="listNavigationContainer">
+					<!-- AJAX fills list names here -->
 				</div>
 			</div>
 			
 			<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-				<main id="listCollectionContainer">
-					<!-- AJAX fill lists here -->
+				<main>
+					<div id="listCollectionContainer" class="row">
+						<!-- AJAX fills lists here -->					
+					</div>
 				</main>
 			</div>
 		</div>
@@ -48,8 +50,8 @@
 		<footer class="bg-warning">
 			<p>Tobias Deißler - Universidad de Sevilla - Escuela Técnica Superior de Ingeniería Informática (2018)</p>
 		</footer>
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="listLoader.js"></script>
 	</body>
 </html>

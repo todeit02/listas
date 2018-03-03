@@ -1,5 +1,4 @@
-var listTemplate;
-var listElementTemplate;
+var listTemplate = {};
 
 $(function(){
 	loadListTemplate();
@@ -7,26 +6,17 @@ $(function(){
 
 function loadListTemplate()
 {
-	$.ajax("list.html", {
-		complete: function(jqXHR, textStatus) {
-			listTemplate = jqXHR.responseText;
-			loadListElementTemplate();
-			},
-		dataType: "html",
-		mimeType: "text/html"
-		});
+	ajaxLoadHtmlTemplate("list.html", "list", loadListItemTemplate);
 }
 
-function loadListElementTemplate()
+function loadListItemTemplate()
 {
-	$.ajax("list_element.html", {
-		complete: function(jqXHR, textStatus) {
-			listElementTemplate = jqXHR.responseText;
-			loadListContent();
-			},
-		dataType: "html",
-		mimeType: "text/html"
-		});
+	ajaxLoadHtmlTemplate("list_item.html", "item", loadListNavigationItemTemplate);
+}
+
+function loadListNavigationItemTemplate()
+{
+	ajaxLoadHtmlTemplate("list_navigation_item.html", "navigationItem", loadListContent);
 }
 
 function loadListContent()
@@ -49,9 +39,12 @@ function insertListContents(listsAllContent)
 
 function insertList(listContent)
 {	
-	var instantiatedListTemplate = $(listTemplate).appendTo("#listCollectionContainer");
-	$(".listTitleText", instantiatedListTemplate).prop("id", listContent.name);
+	var instantiatedListTemplate = $(listTemplate.list).appendTo("#listCollectionContainer");
+	instantiatedListTemplate.prop("id", listContent.name);
 	$(".listTitleText", instantiatedListTemplate).text(listContent.name);
+	
+	var instantiatedListNavigationTemplate = $(listTemplate.navigationItem).appendTo("#listNavigationContainer");
+	$(".navigationButton", instantiatedListNavigationTemplate).text(listContent.name);
 	
 	listContent.items.forEach(function(item)
 	{
@@ -61,7 +54,19 @@ function insertList(listContent)
 
 function appendListItem(appendingItem, listDomElement)
 {
-	var instantiatedElementTemplate = $(listElementTemplate).appendTo(".listElementContainer", listDomElement);
+	var instantiatedElementTemplate = $(listTemplate.item).appendTo(".listElementContainer", listDomElement);
 	$(".listElementName", instantiatedElementTemplate).text(appendingItem.name);
 	$(".listElementQuantity", instantiatedElementTemplate).text(appendingItem.quantity);
+}
+
+function ajaxLoadHtmlTemplate(templatePath, listTemplateStorageName, callback)
+{
+	$.ajax(templatePath, {
+		complete: function(jqXHR, textStatus) {
+			listTemplate[listTemplateStorageName] = jqXHR.responseText;
+			callback();
+			},
+		dataType: "html",
+		mimeType: "text/html"
+		});
 }

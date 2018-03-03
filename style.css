@@ -15,6 +15,11 @@ header
 	flex-grow: 1;
 }
 
+.list{
+	margin: 0;
+	padding: 1em;
+}
+
 .listItemText
 {
 	vertical-align: middle;
@@ -41,6 +46,14 @@ header
 	width: 100%;
 }
 
+.navigationItemContainer
+{
+	padding: 0.2em;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+
 .roundedBorder
 {
 	border: 1px solid black;
@@ -50,6 +63,8 @@ header
 #listNavigation
 {
 	border: 1px solid black;
+	margin: 0;
+	padding: 0;
 	text-align: center;
 }
 
