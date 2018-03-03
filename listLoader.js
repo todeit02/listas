@@ -1,37 +1,67 @@
+var listTemplate;
+var listElementTemplate;
+
 $(function(){
-	$.ajax("lists.json", {
-		complete: function(jqXHR, textStatus) { loadListContent(jqXHR.responseText); },
-		dataType: "json",
-		mimeType: "application/json"
-		});
+	loadListTemplate();
 });
 
-function loadListContent(string)
+function loadListTemplate()
 {
-	var listContainer = JSON.parse(string); 
-	listContainer.lists.forEach(function(list)
-	{	
-		var loadDepot = $("<div></div>");
-		loadDepot.load("list.html", insertList(list, loadDepot));
+	$.ajax("list.html", {
+		complete: function(jqXHR, textStatus) {
+			listTemplate = jqXHR.responseText;
+			loadListElementTemplate();
+			},
+		dataType: "html",
+		mimeType: "text/html"
+		});
+}
+
+function loadListElementTemplate()
+{
+	$.ajax("list_element.html", {
+		complete: function(jqXHR, textStatus) {
+			listElementTemplate = jqXHR.responseText;
+			loadListContent();
+			},
+		dataType: "html",
+		mimeType: "text/html"
+		});
+}
+
+function loadListContent()
+{	
+	$.ajax("lists.json", {
+		complete: function(jqXHR, textStatus)
+			{ 
+				var listsContent = JSON.parse(jqXHR.responseText); 
+				insertListContents(listsContent);
+			},
+		dataType: "json",
+		mimeType: "application/json"
 	});
 }
 
-function insertList(listContent, loadDepot)
+function insertListContents(listsAllContent)
 {
-	console.log(listContent);
-	console.log(loadDepot);
-	console.log(loadDepot.html());
-	$("#listCollectionContainer").append(loadDepot.html());
-	$(".listElementContainer").load("list_element.html", loadListElementContent);
-	
-	// dummy content
-	$(".listTitleText").prop("id", listContent.name);
-	$(".listTitleText").text(listContent.name);
+	listsAllContent.lists.forEach(function(listContent) {insertList(listContent);});
 }
 
-function loadListElementContent()
+function insertList(listContent)
+{	
+	var instantiatedListTemplate = $(listTemplate).appendTo("#listCollectionContainer");
+	$(".listTitleText", instantiatedListTemplate).prop("id", listContent.name);
+	$(".listTitleText", instantiatedListTemplate).text(listContent.name);
+	
+	listContent.items.forEach(function(item)
+	{
+		appendListItem(item, instantiatedListTemplate);
+	});
+}
+
+function appendListItem(appendingItem, listDomElement)
 {
-	// dummy content
-	$(".listElementName").text("Elemento 1");
-	$(".listElementQuantity").text("3 ud.");
+	var instantiatedElementTemplate = $(listElementTemplate).appendTo(".listElementContainer", listDomElement);
+	$(".listElementName", instantiatedElementTemplate).text(appendingItem.name);
+	$(".listElementQuantity", instantiatedElementTemplate).text(appendingItem.quantity);
 }
