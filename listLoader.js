@@ -41,7 +41,7 @@ function insertList(listContent)
 {	
 	var instantiatedListTemplate = $(listTemplate.list).appendTo("#listCollectionContainer");
 	instantiatedListTemplate.prop("id", listContent.name);
-	$(".listTitleText", instantiatedListTemplate).text(listContent.name);
+	$(".listTitleText > span", instantiatedListTemplate).text(listContent.name);
 	
 	var instantiatedListNavigationTemplate = $(listTemplate.navigationItem).appendTo("#listNavigationContainer");
 	$(".navigationButton", instantiatedListNavigationTemplate).text(listContent.name);

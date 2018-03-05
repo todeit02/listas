@@ -1,0 +1,34 @@
+<div id="listAmendmentModal">
+	<form>
+		<h2>Añadir producto</h2>
+		<div class="form-group">
+			<label for="amendingProduct">Producto:</label>
+			<input type="text" class="form-control" id="amendingProduct">
+		</div>
+		<div class="flexContainer">
+			<div class="form-group flewGrow">
+				<label for="amendingQuantity">Cantidad:</label>
+				<input type="text" class="form-control" id="amendingQuantity">
+			</div>
+			<div id="amendingUnitContainer" class="form-group">
+				<label for="amendingUnit">Unidad:</label>
+				<select class="form-control" id="amendingUnit">
+					<option>Ud.</option>
+					<option>g</option>
+					<option>l</option>
+				</select>
+			</div>
+		</div>
+		<div class="checkbox">
+			<label for="amendingQuantity"><input type="checkbox">Esconder para otros participantes</label>
+		</div>
+		<div class="centeredButtonGroup">
+			<button id="cancelAmendmentButton" type="button" class="btn btn-danger squaredButtonBig">
+				<i class="fas fa-times fa-2x"></i>
+			</button>
+			<button id="confirmAmendmentButton" type="button" class="btn btn-success squaredButtonBig">
+				<i class="fas fa-check fa-2x"></i>
+			</button>
+		</div>
+	</form> 
+</div>
