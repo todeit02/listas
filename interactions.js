@@ -1,7 +1,7 @@
 $(function(){
 	$("#listCollectionContainer").on("click", ".listTitleText", toggleListDisplayState);
-	$("#listCollectionContainer").on("click", ".buttonUp", moveListItemUp);
-	$("#listCollectionContainer").on("click", ".buttonDown", moveListItemDown);
+	$("#listCollectionContainer").on("click", ".buttonUp", (event) => {List.handleClickItemMove(event.target, false);});
+	$("#listCollectionContainer").on("click", ".buttonDown", (event) => {List.handleClickItemMove(event.target, true);});
 	$("#listCollectionContainer").on("click", ".listAmendmentButton", loadListAmendmentModal)
 	$("body").on("click", "#cancelAmendmentButton", removeListAmendmentModal);
 	$("body").on("click", "#confirmAmendmentButton", addListAmendmentModalProduct);
@@ -9,26 +9,10 @@ $(function(){
 
 function toggleListDisplayState()
 {
-	var currentState = $(this).parent().siblings(".listElementContainer").css("display");	
+	var currentState = $(this).parent().siblings(".listItemContainer").css("display");	
 	var settingState = (currentState === "none") ? "" : "none";
 	
-	$(this).parent().siblings(".listElementContainer").css("display", settingState);
-}
-
-function moveListItemUp()
-{
-	var movingListItem = $(this).parents(".listElement");
-	if(movingListItem.prev().length === 0) return;
-	
-	movingListItem.insertBefore(movingListItem.prev());
-}
-
-function moveListItemDown()
-{
-	var movingListItem = $(this).parents(".listElement");
-	if(movingListItem.next().length === 0) return;
-	
-	movingListItem.insertAfter(movingListItem.next());
+	$(this).parent().siblings(".listItemContainer").css("display", settingState);
 }
 
 function loadListAmendmentModal()

@@ -5,15 +5,18 @@
 			"items": [
 				{
 					"name": "zanahorias",
-					"quantity": "800 g"
+					"quantity": "800",
+					"unit": "g"
 				},
 				{
 					"name": "harina",
-					"quantity": "2000 g"
+					"quantity": "2000",
+					"unit": "g"
 				},
 				{
 					"name": "manzanas (golden)",
-					"quantity": "5"
+					"quantity": "5",
+					"unit": "ud."
 				}
 			]
 		},
@@ -22,23 +25,28 @@
 			"items": [
 				{
 					"name": "coca-cola",
-					"quantity": "7 L"
+					"quantity": "7",
+					"unit": "l"
 				},
 				{
 					"name": "agua con gas",
-					"quantity": "3 L"
+					"quantity": "3",
+					"unit": "l"
 				},
 				{
 					"name": "cacahuetes",
-					"quantity": "600g"
+					"quantity": "600",
+					"unit": "g"
 				},
 				{
 					"name": "cerveza (marca A)",
-					"quantity": "5 L"
+					"quantity": "5",
+					"unit": "l"
 				},
 				{
 					"name": "cerveza (marca B)",
-					"quantity": "3 L"
+					"quantity": "3",
+					"unit": "l"
 				}
 			]
 		},
@@ -47,15 +55,18 @@
 			"items": [
 				{
 					"name": "zanahorias",
-					"quantity": "800 g"
+					"quantity": "800",
+					"unit": "g"
 				},
 				{
 					"name": "harina",
-					"quantity": "2000 g"
+					"quantity": "2000",
+					"unit": "g"
 				},
 				{
 					"name": "manzanas (golden)",
-					"quantity": "5"
+					"quantity": "5",
+					"unit": "ud."
 				}
 			]
 		},
@@ -64,23 +75,28 @@
 			"items": [
 				{
 					"name": "coca-cola",
-					"quantity": "7 L"
+					"quantity": "7",
+					"unit": "l"
 				},
 				{
 					"name": "agua con gas",
-					"quantity": "3 L"
+					"quantity": "3",
+					"unit": "l"
 				},
 				{
 					"name": "cacahuetes",
-					"quantity": "600g"
+					"quantity": "600",
+					"unit": "g"
 				},
 				{
 					"name": "cerveza (marca A)",
-					"quantity": "5 L"
+					"quantity": "5",
+					"unit": "l"
 				},
 				{
 					"name": "cerveza (marca B)",
-					"quantity": "3 L"
+					"quantity": "3",
+					"unit": "l"
 				}
 			]
 		}
