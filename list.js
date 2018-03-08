@@ -12,11 +12,11 @@ function List(listData)
         jQueryElement.find(".listItemContainer").append(appendingListItem.getJQueryElement());		
     }
     
-    this.removeItem = function(removingListItem)
+    this.deleteItem = function(deletingListItem)
 	{		
-		let removingItemIndex = items.indexOf(removingListItem);
-		items.splice(removingItemIndex, 1);
-		removingListItem.remove();
+		let deletingItemIndex = items.indexOf(deletingListItem);
+		items.splice(deletingListItem, 1);
+		deletingListItem.delete();
 	}
 
 	this.remove = function()
@@ -35,14 +35,8 @@ function List(listData)
         isMovingOutOfBounds = isMovingOutOfBounds || ((itemIndex === (items.length - 1)) && isDownwards);
         if(isMovingOutOfBounds) return;
 
-        console.log("Before moving " + movingItem.getJQueryElement().find(".listItemName").text() + isDownwards.toString());
-        items.forEach((item) => {console.log(item.getJQueryElement().find(".listItemName").text());});
-
         let displacement = isDownwards ? 1 : (-1);
         items.splice(itemIndex + displacement, 0, items.splice(itemIndex, 1)[0]); // move in array
-
-        console.log("After moving:")
-        items.forEach((item) => {console.log(item.getJQueryElement().find(".listItemName").text());});
 
         relayoutItems();
     }
@@ -60,6 +54,15 @@ function List(listData)
     this.represents = (jQueryListObject) => jQueryElement.is(jQueryListObject);
     this.navigationItemRepresents = (jQueryListObject) => navigationItem.represents(jQueryListObject);
 
+    this.includesItemName = function(name)
+    {
+        for(possibleNameBearerItem of items)
+        {
+            if(possibleNameBearerItem.getName() === name) return true;
+        }
+        return false;
+    }
+
     let relayoutItems = function()
     {
         let displayedItems = $(".listItem", jQueryElement)
@@ -69,7 +72,6 @@ function List(listData)
             if(items[i].hasSameContentAs(displayedItems.eq(i))) continue;
             displayedItems.eq(i).replaceWith( $(items[i].getJQueryElement().clone()) );
         }
-        //items.forEach(function(item){console.log(item.getJQueryElement());});
     }
     
 
@@ -101,13 +103,22 @@ List.getRepresentative = function(jQueryObject)
 
 List.handleClickItemMove = function(initiatorDomObject, isDownwards)
 {
-    console.log("Clicked move.");
     let movingItemJQuery = $(initiatorDomObject).parents(".listItem");
     let movingItem = this.getRepresentative(movingItemJQuery);
     let containingListJQuery = movingItemJQuery.parents(".list");
     let containingList = this.getRepresentative(containingListJQuery);
 
     containingList.moveItem(movingItem, isDownwards);
+}
+
+List.handleClickItemDelete = function(initiatorDomObject)
+{
+    let deletingItemJQuery = $(initiatorDomObject).parents(".listItem");
+    let deletingItem = this.getRepresentative(deletingItemJQuery);
+    let containingListJQuery = deletingItemJQuery.parents(".list");
+    let containingList = this.getRepresentative(containingListJQuery);
+
+    containingList.deleteItem(deletingItem);
 }
 
 List.create = function(listData)

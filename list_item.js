@@ -29,7 +29,7 @@ function ListItem(itemData)
     
     this.getJQueryElement = function() { return jQueryElement; };
 
-    this.remove = function() { jQueryElement.remove(); }
+    this.delete = function() { jQueryElement.remove(); }
 	this.hasSameContentAs = function(comparingJQueryObject)
 	{
 		if(comparingJQueryObject.hasClass("listItem") == false) return false;

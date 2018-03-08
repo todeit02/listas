@@ -71,6 +71,13 @@ header
 	height: 6em;
 }
 
+#amendingErrorMessage
+{
+	color: red;
+	display: none;
+	font-weight: bold;
+}
+
 #listAmendmentModal {
     padding: 0.5em;
 	position: fixed;
