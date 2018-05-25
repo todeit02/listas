@@ -27,7 +27,8 @@ function ListItem(itemData)
 		$(".listItemUnit", jQueryElement).text(unit);
     }
     
-    this.getJQueryElement = function() { return jQueryElement; };
+	this.getJQueryElement = () => jQueryElement;
+	this.setJQueryElement = (settingElement) => {jQueryElement = settingElement;};
 
     this.delete = function() { jQueryElement.remove(); }
 	this.hasSameContentAs = function(comparingJQueryObject)

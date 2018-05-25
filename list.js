@@ -15,7 +15,7 @@ function List(listData)
     this.deleteItem = function(deletingListItem)
 	{		
 		let deletingItemIndex = items.indexOf(deletingListItem);
-		items.splice(deletingListItem, 1);
+		items.splice(deletingItemIndex, 1);
 		deletingListItem.delete();
 	}
 
@@ -39,6 +39,8 @@ function List(listData)
         items.splice(itemIndex + displacement, 0, items.splice(itemIndex, 1)[0]); // move in array
 
         relayoutItems();
+
+        items.forEach((item) => console.log(item.getName()));
     }
 
     this.getRepresentingListItem = function(jQueryObject)
@@ -65,12 +67,16 @@ function List(listData)
 
     let relayoutItems = function()
     {
-        let displayedItems = $(".listItem", jQueryElement)
+        let displayedItems = $(".listItem", jQueryElement);
 
         for(let i = 0; i < items.length; i++)
         {
             if(items[i].hasSameContentAs(displayedItems.eq(i))) continue;
-            displayedItems.eq(i).replaceWith( $(items[i].getJQueryElement().clone()) );
+
+            // old item has to be cloned because the replacement makes it unavailable for later insert
+            let replacementItem = $(items[i].getJQueryElement().clone());
+            items[i].setJQueryElement(replacementItem);
+            displayedItems.eq(i).replaceWith(replacementItem);
         }
     }
     
