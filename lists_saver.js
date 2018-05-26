@@ -3,27 +3,35 @@ function saveCurrentLists(onSucceeded, onFailed)
     // get username    
     const username = dummyUsername; // dummy
 
-    var requestData;
-    requestData["listsData"] = List.currentListsJson;
+    let requestData = {};
+    let listsContainer = {};
+    listsContainer.lists = List.existentLists.map((list) => list.getDataObject());
+
+    requestData["listsData"] = listsContainer;
     requestData["username"] = username;
 
     const requestDataJson = JSON.stringify(requestData);
     
-    $.post(saveListsPhpFilePath, requestDataJson, onServerResponse, serverHttpUserInteractionResponseDataType);
     $.ajax(saveListsPhpFilePath, {
-        success: onListsSaveSuccessResponse,
-        error: onListsSaveErrorResponse,
+        method: "POST",
+        data: requestDataJson,
+        success: function() { (data, textStatus, jqXHR) => onListsSaveSuccessResponse(data, textStatus, jqXHR, onSucceeded, onFailed); },
+        error: onFailed,
 		dataType: serverHttpUserInteractionResponseDataType,
 		mimeType: serverHttpUserInteractionResponseMimeType
 		});
 }
 
-function onListsSaveSuccessResponse()
+function onListsSaveSuccessResponse(data, textStatus, jqXHR, onSucceeded, onFailed)
 {
-    
-}
+    const responseObject = JSON.parse(data);
 
-function onListsSaveErrorResponse(jqXHR, textStatus, errorThrown)
-{
-    
+    if(responseObject["hasSucceeded"] == true) 
+    {
+        if(onSucceded != null) onSucceeded();
+    }
+    else 
+    {
+        if(onFailed != null) onFailed();
+    }
 }

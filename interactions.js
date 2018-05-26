@@ -66,5 +66,12 @@ function addListAmendmentModalProduct(triggeringButton, extendingList)
 		let appendingItem = new ListItem(listItemData);
 		extendingList.appendItem(appendingItem);
 		removeListAmendmentModal();
+
+        saveCurrentLists(null, notifyAutosaveError);
 	}	
+}
+
+function notifyAutosaveError()
+{
+	alert("Se perdió la conexión al servidor. Se tratará de subir después del próximo cambio.");
 }

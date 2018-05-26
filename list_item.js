@@ -38,7 +38,6 @@ function ListItem(itemData)
 		let represents = (jQueryElement.find(".listItemName").text() === comparingJQueryObject.find(".listItemName").text());
 		represents = represents && (jQueryElement.find(".listItemQuantity").text() === comparingJQueryObject.find(".listItemQuantity").text());
 		represents = represents && (jQueryElement.find(".listItemUnit").text() === comparingJQueryObject.find(".listItemUnit").text());
-		console.log(jQueryElement.find(".listItemName").text() + " === " + comparingJQueryObject.find(".listItemName").text() + "? " + represents.toString());
 		return represents;
 	}
 
@@ -48,4 +47,14 @@ function ListItem(itemData)
 	this.setName(itemData.name);
 	this.setQuantity(itemData.quantity);
 	this.setUnit(itemData.unit);
+
+	this.getDataObject = function()
+	{
+		let dataObject = {};
+		dataObject.name = name;
+		dataObject.quantity = quantity;
+		dataObject.unit = unit;
+
+		return dataObject;
+	}
 }

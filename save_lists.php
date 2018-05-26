@@ -6,17 +6,18 @@
 	$hasSucceeded = false;
 	
     $requestData = json_decode(file_get_contents("php://input"), true);
-	$listsData = $requestData["listsData"];
 	$username = $requestData["username"];
+	$lists = $requestData["listsData"];
+	$listsJson = json_encode($lists, JSON_PRETTY_PRINT);
 	
-	$listContentsPath = $offerId . "_lists.json";
+	$listContentsPath = ($username . "_lists.json");
 	
 	$listsFile = fopen($listContentsPath, "w");
 	if($listsFile)
 	{
-		$writtenBytesCount = fwrite($listsFile, $listsData);
+		$writtenBytesCount = fwrite($listsFile, $listsJson);
 		fclose($listsFile);
-		$hasSucceeded = ($writtenBytesCount == strlen($listsData));
+		$hasSucceeded = ($writtenBytesCount == strlen($listsJson));
 	}
 	
 	print json_encode(

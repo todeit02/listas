@@ -16,7 +16,7 @@ function loadListItemTemplate()
 
 function loadListNavigationItemTemplate()
 {
-	ajaxLoadHtmlTemplate("list_navigation_item.html", ListNavigationItem, loadListContent);
+	ajaxLoadHtmlTemplate("list_navigation_item.html", ListNavigationItem, loadListContentForUser);
 }
 
 

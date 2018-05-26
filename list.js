@@ -9,14 +9,14 @@ function List(listData)
 	this.appendItem = function(appendingListItem)
 	{
         items.push(appendingListItem);
-        jQueryElement.find(".listItemContainer").append(appendingListItem.getJQueryElement());		
+        jQueryElement.find(".listItemContainer").append(appendingListItem.getJQueryElement());
     }
     
     this.deleteItem = function(deletingListItem)
 	{		
 		let deletingItemIndex = items.indexOf(deletingListItem);
 		items.splice(deletingItemIndex, 1);
-		deletingListItem.delete();
+        deletingListItem.delete();
 	}
 
 	this.remove = function()
@@ -39,8 +39,14 @@ function List(listData)
         items.splice(itemIndex + displacement, 0, items.splice(itemIndex, 1)[0]); // move in array
 
         relayoutItems();
+    }
 
-        items.forEach((item) => console.log(item.getName()));
+    this.getItems = function()
+    {
+        let copiedItems = [];
+        items.forEach((item) => copiedItems.push(item));
+
+        return copiedItems;
     }
 
     this.getRepresentingListItem = function(jQueryObject)
@@ -53,6 +59,16 @@ function List(listData)
     }
 
     this.getName = () => name;
+
+    this.getDataObject = function()
+    {
+        var dataObject = {};
+        dataObject.name = name;
+        dataObject.items = items.map((item) => item.getDataObject());
+
+        return dataObject;
+    }
+
     this.represents = (jQueryListObject) => jQueryElement.is(jQueryListObject);
     this.navigationItemRepresents = (jQueryListObject) => navigationItem.represents(jQueryListObject);
 
@@ -115,6 +131,8 @@ List.handleClickItemMove = function(initiatorDomObject, isDownwards)
     let containingList = this.getRepresentative(containingListJQuery);
 
     containingList.moveItem(movingItem, isDownwards);
+
+    saveCurrentLists(null, notifyAutosaveError);
 }
 
 List.handleClickItemDelete = function(initiatorDomObject)
@@ -125,11 +143,13 @@ List.handleClickItemDelete = function(initiatorDomObject)
     let containingList = this.getRepresentative(containingListJQuery);
 
     containingList.deleteItem(deletingItem);
+
+    saveCurrentLists(null, notifyAutosaveError);
 }
 
 List.create = function(listData)
 {
-    this.existentLists.push(new List(listData));	
+    this.existentLists.push(new List(listData));
 }
 
 List.existentLists = [];
