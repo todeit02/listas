@@ -26,18 +26,7 @@
         },
         {
             "name": "Fiesta del domingo 2",
-            "items": [
-                {
-                    "name": "agua con gas",
-                    "quantity": "3",
-                    "unit": "l"
-                },
-                {
-                    "name": "algo nuevooooo",
-                    "quantity": "123",
-                    "unit": "Ud."
-                }
-            ]
+            "items": []
         }
     ]
 }

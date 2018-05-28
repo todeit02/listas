@@ -1,0 +1,7 @@
+- hide list (fix)
+- list menu
+	* rename
+	* delete
+- add list
+- relayout own/foreign buttons
+- share list
