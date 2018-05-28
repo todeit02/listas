@@ -27,18 +27,6 @@ function ListsLoader(username)
 	{	
 		const requestData = { "username" : username };
 	
-		/*
-		$.ajax(listsContentsPath, {
-			complete: function(jqXHR, textStatus)
-				{ 
-					let listsContent = JSON.parse(jqXHR.responseText); 
-					createLists(listsContent);
-				},
-			dataType: listsHttpDataType,
-			mimeType: listsHttpMimeType
-		});
-		*/
-
 		$.ajax(loadListsPhpFilePath, {
 			method: "GET",
 			data: requestData,

@@ -4,10 +4,14 @@ $(function(){
 
 function toggleListDisplayState()
 {
-	var currentState = $(this).parent().siblings(".listItemContainer").css("display");	
-	var settingState = (currentState === "none") ? "" : "none";
+	let listTitleDiv = $(this);
+	let isActive = !listTitleDiv.hasClass("inactive");
 	
-	$(this).parent().siblings(".listItemContainer").css("display", settingState);
+	let settingItemsDisplayState = isActive ? "none" : "";	
+	listTitleDiv.parent().siblings(".listItemContainer, .listAmendmentButton").css("display", settingItemsDisplayState);
+
+	let activityClassAction = isActive ? listTitleDiv.addClass : listTitleDiv.removeClass;
+	activityClassAction.call(listTitleDiv, "inactive");
 }
 
 function loadListAmendmentModal()
@@ -17,7 +21,7 @@ function loadListAmendmentModal()
 
 function prepareListAmendmentModal(modalJQuery, triggerinButtonJQuery)
 {
-	let extendingListJQuery = $(this).parent(".list");
+	let extendingListJQuery = triggerinButtonJQuery.parent(".list");
 	let extendingList = List.getRepresentative(extendingListJQuery);
 	let extendingListName = extendingList.getName();
 

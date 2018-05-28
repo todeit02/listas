@@ -1,5 +1,3 @@
-<style>
-
 header
 {
 	border: 1px solid black;
@@ -34,6 +32,24 @@ header
 .listItemQuantity
 {
 	width: 20%;
+}
+
+.listTitleTextActive
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+.listTitleText
+{
+	text-align: center;
+	font-weight: bold;
+}
+
+.listTitleText.inactive
+{
+	background-color: rgb(202, 202, 202);
+	font-weight: normal;
 }
 
 .menuButton
@@ -104,5 +120,3 @@ header
 	border: 1px;
 	margin: 0.5em;	
 }
-
-</style>
