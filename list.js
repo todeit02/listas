@@ -67,10 +67,11 @@ function List(listData)
     this.getName = () => name;
 
 
-    this.setName = function(nameString)
+    this.setName = function(settingName)
     {
-        name = nameString;
-        jQueryElement.find(".listTitleText > span").text(nameString);
+        name = settingName;
+        jQueryElement.find(".listTitleText > span").text(settingName);
+        navigationItem.setName(settingName);
     }
 
 
@@ -142,9 +143,9 @@ List.getRepresentative = function(jQueryObject)
 }
 
 
-List.nameExists = function(name)
+List.nameExists = function(testingName)
 {
-    let existingListWithName = this.existentLists.find((list) => list.name === name)
+    let existingListWithName = this.existentLists.find((list) => list.name === testingName)
     
     return (existingListWithName != undefined);
 }
@@ -247,11 +248,11 @@ List.create = function(listData)
     this.existentLists.push(new List(listData));
 }
 
-List.createFromName = function(name)
+List.createFromName = function(creatingListName)
 {
-    if(List.nameExists(name)) return false;
+    if(List.nameExists(creatingListName)) return false;
 
-    let listData = { name: name, items: [] };
+    let listData = { name: creatingListName, items: [] };
     List.create(listData);
 
     return true;

@@ -1,9 +1,14 @@
-function ListNavigationItem(nameString)
+function ListNavigationItem(initialName)
 {
 	// properties
-	let name = nameString;
+	let name = initialName;
 	let jQueryElement;
 
+	this.setName = function(settingName)
+	{
+		name = settingName;
+		$(".navigationButton", jQueryElement).text(settingName);
+	}
 
 	this.remove = function()
 	{		

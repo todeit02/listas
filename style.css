@@ -27,20 +27,23 @@ header
 	flex-grow: 1;
 }
 
-.list{
-	margin: 0;
-	padding: 1em;
+.list
+{
+	padding: 1%;
 }
 
 .listItemName
 {
-	vertical-align: middle;
+	align-items: center;
+	display: flex;
 	text-align: left;
 	text-overflow: ellipsis;
 }
 
+
 .listItemQuantity
 {
+	position: relative;
 	width: 20%;
 }
 
