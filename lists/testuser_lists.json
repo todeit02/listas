@@ -1,0 +1,104 @@
+{
+    "lists": [
+        {
+            "name": "V\u00edveres del s\u00e1bado",
+            "items": [
+                {
+                    "name": "zanahorias",
+                    "quantity": "800",
+                    "unit": "g"
+                },
+                {
+                    "name": "harina",
+                    "quantity": "2000",
+                    "unit": "g"
+                },
+                {
+                    "name": "manzanas (golden)",
+                    "quantity": "5",
+                    "unit": "ud."
+                }
+            ]
+        },
+        {
+            "name": "Fiesta del domingo",
+            "items": [
+                {
+                    "name": "coca-cola",
+                    "quantity": "7",
+                    "unit": "l"
+                },
+                {
+                    "name": "agua con gas",
+                    "quantity": "3",
+                    "unit": "l"
+                },
+                {
+                    "name": "cacahuetes",
+                    "quantity": "600",
+                    "unit": "g"
+                },
+                {
+                    "name": "cerveza (marca A)",
+                    "quantity": "5",
+                    "unit": "l"
+                },
+                {
+                    "name": "cerveza (marca B)",
+                    "quantity": "3",
+                    "unit": "l"
+                }
+            ]
+        },
+        {
+            "name": "V\u00edveres del s\u00e1bado 2",
+            "items": [
+                {
+                    "name": "zanahorias",
+                    "quantity": "800",
+                    "unit": "g"
+                },
+                {
+                    "name": "harina",
+                    "quantity": "2000",
+                    "unit": "g"
+                },
+                {
+                    "name": "manzanas (golden)",
+                    "quantity": "5",
+                    "unit": "ud."
+                }
+            ]
+        },
+        {
+            "name": "Fiesta del domingo 2",
+            "items": [
+                {
+                    "name": "coca-cola",
+                    "quantity": "7",
+                    "unit": "l"
+                },
+                {
+                    "name": "agua con gas",
+                    "quantity": "3",
+                    "unit": "l"
+                },
+                {
+                    "name": "cacahuetes",
+                    "quantity": "600",
+                    "unit": "g"
+                },
+                {
+                    "name": "cerveza (marca A)",
+                    "quantity": "5",
+                    "unit": "l"
+                },
+                {
+                    "name": "cerveza (marca B)",
+                    "quantity": "3",
+                    "unit": "l"
+                }
+            ]
+        }
+    ]
+}

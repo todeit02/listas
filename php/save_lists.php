@@ -10,7 +10,8 @@
 	$lists = $requestData["listsData"];
 	$listsJson = json_encode($lists, JSON_PRETTY_PRINT);
 	
-	$listContentsPath = ($username . "_lists.json");
+	$listsFolder = "../lists/";
+	$listContentsPath = ($listsFolder . $username . "_lists.json");
 	
 	$listsFile = fopen($listContentsPath, "w");
 	if($listsFile)

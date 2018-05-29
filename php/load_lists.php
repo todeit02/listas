@@ -5,8 +5,9 @@
 
 	$username = $_GET["username"];
 	
+	$listsFolder = "../lists/";
 	$listsFileSuffix = "_lists.json";
-	$listsFilePath = ($username . $listsFileSuffix);
+	$listsFilePath = ($listsFolder . $username . $listsFileSuffix);
 	
 	$listsFile = false;
 	if(file_exists($listsFilePath))
