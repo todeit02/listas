@@ -1,0 +1,29 @@
+{
+    "lists": [
+        {
+            "name": "Una lista",
+            "items": [
+                {
+                    "name": "hola",
+                    "quantity": "2,7",
+                    "unit": "l"
+                }
+            ]
+        },
+        {
+            "name": "otra lista",
+            "items": [
+                {
+                    "name": "algo",
+                    "quantity": "15",
+                    "unit": "g"
+                },
+                {
+                    "name": "algo m\u00e1s",
+                    "quantity": "7",
+                    "unit": "Ud."
+                }
+            ]
+        }
+    ]
+}

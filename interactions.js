@@ -2,6 +2,7 @@ $(function(){
 	loadLogin();
 });
 
+
 function toggleListDisplayState()
 {
 	let listTitleDiv = $(this);
@@ -14,37 +15,37 @@ function toggleListDisplayState()
 	activityClassAction.call(listTitleDiv, "inactive");
 }
 
+
 function loadListAmendmentModal()
 {
-	loadTemplateIntoContainer(listAmendmentModalPath, "body", (modalJQuery) => prepareListAmendmentModal(modalJQuery, $(this)));
+	loadTemplateIntoContainer(LIST_AMENDMENT_MODAL_PATH, "body", (modalJQuery) => prepareListAmendmentModal(modalJQuery, $(this)));
 }
 
-function prepareListAmendmentModal(modalJQuery, triggerinButtonJQuery)
+
+function prepareListAmendmentModal(modalJQuery, triggeringButtonJQuery)
 {
-	let extendingListJQuery = triggerinButtonJQuery.parent(".list");
+	let extendingListJQuery = triggeringButtonJQuery.parent(".list");
 	let extendingList = List.getRepresentative(extendingListJQuery);
 	let extendingListName = extendingList.getName();
 
 	$("#extendingListName").text(extendingListName);
-	$("#cancelAmendmentButton", modalJQuery).click(removeListAmendmentModal);
-	$("#confirmAmendmentButton", modalJQuery).click((event) => addListAmendmentModalProduct(event.target, extendingList));
+	$("#cancelAmendmentButton", modalJQuery).click(() => $("#modal").remove());
+	$("#confirmAmendmentButton", modalJQuery).click(
+		(event) => addListAmendmentModalProduct(event.target, extendingList)
+	);
 }
 
-function removeListAmendmentModal()
-{
-	$("#listAmendmentModal").remove();
-}
 
 function addListAmendmentModalProduct(triggeringButton, extendingList)
 {
 	let listItemData = {};
-	listItemData.name = $(triggeringButton).parents("#listAmendmentModal").find("#amendingProduct").val();
-	listItemData.quantity = $(triggeringButton).parents("#listAmendmentModal").find("#amendingQuantity").val();
-	listItemData.unit = $(triggeringButton).parents("#listAmendmentModal").find("#amendingUnit").val();
+	listItemData.name = $(triggeringButton).parents("#modal").find("#amendingProduct").val();
+	listItemData.quantity = $(triggeringButton).parents("#modal").find("#amendingQuantity").val();
+	listItemData.unit = $(triggeringButton).parents("#modal").find("#amendingUnit").val();
 	
 	if(extendingList.includesItemName(listItemData.name))
 	{
-		$("#amendingErrorMessage").text("Ya existe una entrada con este nombre.");
+		$("#amendingErrorMessage").text(STRINGS.ITEM_EXISTS_ERROR);
 		$("#amendingErrorMessage").css("display", "inline");
 		return;
 	}
@@ -53,18 +54,40 @@ function addListAmendmentModalProduct(triggeringButton, extendingList)
 		$("#amendingErrorMessage").text("");
 		let appendingItem = new ListItem(listItemData);
 		extendingList.appendItem(appendingItem);
-		removeListAmendmentModal();
+		$("#modal").remove();
 
         saveCurrentLists(null, notifyAutosaveError);
 	}	
 }
 
-function notifyAutosaveError()
+function loadListCreationModal()
 {
-	alert("Se perdió la conexión al servidor. Se tratará de subir después del próximo cambio.");
+	loadTemplateIntoContainer(LIST_CREATION_MODAL_PATH, "body", (modalJQuery) => prepareListCreationModal(modalJQuery));
 }
 
-function notifyServerConnectionError()
+
+function prepareListCreationModal(modalJQuery)
 {
-	alert("No hay conexión al servidor. Inténtelo más luego por favor.");
+	$("#cancelCreationButton", modalJQuery).click(() => $("#modal").remove());
+	$("#confirmCreationButton", modalJQuery).click(
+		() => tryCreateList($("#creatingListName").val())
+	);
 }
+
+
+function tryCreateList(creatingListName)
+{
+	let creationSucceeded = List.createFromName(creatingListName);
+	if(creationSucceeded)
+	{
+		$("#modal").remove();
+	}
+	else
+	{
+		$("#creationErrorMessage").text(STRINGS.LIST_EXISTS_ERROR);
+	}
+}
+
+function notifyAutosaveError() { alert(STRINGS.SAVE_ERROR); }
+
+function notifyServerConnectionError() { alert(STRINGS.CONNECTION_ERROR); }

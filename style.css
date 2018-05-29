@@ -1,3 +1,7 @@
+footer{
+	text-align: center;
+}
+
 header
 {
 	border: 1px solid black;
@@ -28,10 +32,11 @@ header
 	padding: 1em;
 }
 
-.listItemText
+.listItemName
 {
 	vertical-align: middle;
 	text-align: left;
+	text-overflow: ellipsis;
 }
 
 .listItemQuantity
@@ -49,13 +54,14 @@ header
 {
 	text-align: center;
 	font-weight: bold;
+	text-overflow: ellipsis;
 }
 
-.listTitleText.inactive
-{
-	background-color: rgb(202, 202, 202);
-	font-weight: normal;
-}
+	.listTitleText.inactive
+	{
+		background-color: rgb(202, 202, 202);
+		font-weight: normal;
+	}
 
 .menuButton
 {
@@ -70,6 +76,7 @@ header
 	text-align: center;
 	vertical-align: middle;
 	width: 100%;
+	word-wrap: break-word;
 }
 
 .navigationItemContainer
@@ -92,6 +99,12 @@ header
 	height: 6em;
 }
 
+.wideButtonFlexible
+{
+	width: 100%;
+	height: 3em;
+}
+
 #amendingErrorMessage
 {
 	color: red;
@@ -99,7 +112,8 @@ header
 	font-weight: bold;
 }
 
-#listAmendmentModal {
+#modal
+{
     padding: 0.5em;
 	position: fixed;
     z-index: 1;
@@ -110,6 +124,12 @@ header
     overflow: auto;
     background-color: rgb(255, 193, 7);
     background-color: rgba(255, 193, 7, 0.95);
+}
+
+#login
+{
+	padding: 5% 0 5% 0;
+	text-align: center;
 }
 
 #listNavigation

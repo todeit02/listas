@@ -2,7 +2,7 @@ function loadListsView(username)
 {
 	let mainContainerSelector = "#mainContainer";
 	$(mainContainerSelector).empty();
-	loadTemplateIntoContainer(listsviewTemplatePath, mainContainerSelector, (listsViewJQuery) => prepareListsView(listsViewJQuery, username));
+	loadTemplateIntoContainer(LISTSVIEW_TEMPLATE_PATH, mainContainerSelector, (listsViewJQuery) => prepareListsView(listsViewJQuery, username));
 }
 
 
@@ -18,4 +18,6 @@ function prepareListsView(listsViewJQuery, username)
     $("#listCollectionContainer").on("click", ".listItemDeleteButton", (event) => List.handleClickItemDelete(event.target));
 	$("#listCollectionContainer").on("click", ".listRenameButton", (event) => List.handleStartRename(event.target));
 	$("#listCollectionContainer").on("click", ".listDeleteButton", (event) => List.handleClickDelete(event.target));
+
+	$("#addListButton").click(loadListCreationModal);
 }

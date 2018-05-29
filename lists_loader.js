@@ -7,33 +7,33 @@ function ListsLoader(username)
 
 	function loadListTemplate()
 	{
-		loadTemplateForConstructor(listTemplatePath, List, loadListItemTemplate);
+		loadTemplateForConstructor(LIST_TEMPLATE_PATH, List, loadListItemTemplate);
 	}
 	
 	
 	function loadListItemTemplate()
 	{
-		loadTemplateForConstructor(listItemTemplatePath, ListItem, loadListNavigationItemTemplate);
+		loadTemplateForConstructor(LIST_ITEM_TEMPLATE_PATH, ListItem, loadListNavigationItemTemplate);
 	}
 	
 	
 	function loadListNavigationItemTemplate()
 	{
-		loadTemplateForConstructor(listNavigationItemTemplatePath, ListNavigationItem, loadListContentForUser);
+		loadTemplateForConstructor(LIST_NAVIGATION_ITEM_TEMPLATE_PATH, ListNavigationItem, loadListContentForUser);
 	}
 	
 	
 	function loadListContentForUser()
 	{	
-		const requestData = { "username" : username };
+		const requestData = { username: username };
 	
-		$.ajax(loadListsPhpFilePath, {
+		$.ajax(LOAD_LISTS_PHP_FILE_PATH, {
 			method: "GET",
 			data: requestData,
 			success: (data, textStatus, jqXHR) => createLists(data),
 			error: notifyServerConnectionError,
-			dataType: listsHttpDataType,
-			mimeType: listsHttpMimeType
+			dataType: LISTS_HTTP_DATA_TYPE,
+			mimeType: LISTS_HTTP_MIME_TYPE
 			});
 	}	
 	

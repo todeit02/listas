@@ -1,3 +1,2 @@
-- add list
 - relayout own/foreign buttons
 - share list

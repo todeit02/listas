@@ -10,7 +10,7 @@ function ListItem(itemData)
 	this.setName = function(nameString)
 	{
 		name = nameString;
-		$(".listItemName", jQueryElement).text(name);
+		$(".listItemName > .listItemText", jQueryElement).text(name);
 	}
 
 	this.getQuantity = () => quantity;
@@ -35,7 +35,7 @@ function ListItem(itemData)
 	{
 		if(comparingJQueryObject.hasClass("listItem") == false) return false;
 
-		let represents = (jQueryElement.find(".listItemName").text() === comparingJQueryObject.find(".listItemName").text());
+		let represents = (jQueryElement.find(".listItemName > .listItemText").text() === comparingJQueryObject.find(".listItemName > .listItemText").text());
 		represents = represents && (jQueryElement.find(".listItemQuantity").text() === comparingJQueryObject.find(".listItemQuantity").text());
 		represents = represents && (jQueryElement.find(".listItemUnit").text() === comparingJQueryObject.find(".listItemUnit").text());
 		return represents;

@@ -1,6 +1,6 @@
 function loadLogin()
 {
-    loadTemplateIntoContainer(loginTemplatePath, "#mainContainer", prepareLogin);
+    loadTemplateIntoContainer(LOGIN_TEMPLATE_PATH, "#mainContainer", prepareLogin);
 }
 
 
@@ -13,5 +13,8 @@ function prepareLogin(loginJQuery)
 function tryLogin()
 {
     let username = $("#username").val();
+    currentUsername = username;
     loadListsView(username);
 }
+
+let currentUsername;

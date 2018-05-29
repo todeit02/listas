@@ -1,7 +1,7 @@
 function saveCurrentLists(onSucceeded, onFailed)
 {
     // get username    
-    const username = dummyUsername; // dummy
+    const username = currentUsername;
 
     let requestData = {};
     let listsContainer = {};
@@ -12,13 +12,13 @@ function saveCurrentLists(onSucceeded, onFailed)
 
     const requestDataJson = JSON.stringify(requestData);
     
-    $.ajax(saveListsPhpFilePath, {
+    $.ajax(SAVE_LISTS_PHP_FILE_PATH, {
         method: "POST",
         data: requestDataJson,
         success: function() { (data, textStatus, jqXHR) => onListsSaveSuccessResponse(data, textStatus, jqXHR, onSucceeded, onFailed); },
         error: onFailed,
-		dataType: serverHttpUserInteractionResponseDataType,
-		mimeType: serverHttpUserInteractionResponseMimeType
+		dataType: SERVER_HTTP_USER_INTERACTION_RESPONSE_DATA_TYPE,
+		mimeType: SERVER_HTTP_USER_INTERACTION_RESPONSE_MIME_TYPE
 		});
 }
 

@@ -142,6 +142,14 @@ List.getRepresentative = function(jQueryObject)
 }
 
 
+List.nameExists = function(name)
+{
+    let existingListWithName = this.existentLists.find((list) => list.name === name)
+    
+    return (existingListWithName != undefined);
+}
+
+
 List.handleClickItemMove = function(initiatorDomObject, isDownwards)
 {
     let movingItemJQuery = $(initiatorDomObject).parents(".listItem");
@@ -234,10 +242,19 @@ List.handleClickDelete = function(initiatorDomObject)
     saveCurrentLists(null, notifyAutosaveError);
 }
 
-
 List.create = function(listData)
 {
     this.existentLists.push(new List(listData));
+}
+
+List.createFromName = function(name)
+{
+    if(List.nameExists(name)) return false;
+
+    let listData = { name: name, items: [] };
+    List.create(listData);
+
+    return true;
 }
 
 
