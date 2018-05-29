@@ -12,6 +12,7 @@ function List(listData)
         jQueryElement.find(".listItemContainer").append(appendingListItem.getJQueryElement());
     }
     
+
     this.deleteItem = function(deletingListItem)
 	{		
 		let deletingItemIndex = items.indexOf(deletingListItem);
@@ -19,14 +20,16 @@ function List(listData)
         deletingListItem.delete();
 	}
 
+
 	this.remove = function()
 	{
-		jQueryElement.remove();
-        navigationItem.remove();
+		jQueryElement.hide(500, () => jQueryElement.remove());
+		navigationItem.remove();
 
-        var existentListsIndex = this.existentLists.indexOf(this);
-        List.prototype.existentLists.splice(existentListsIndex, 1);
+        var existentListsIndex = List.existentLists.indexOf(this);
+        List.existentLists.splice(existentListsIndex, 1);
     }
+
 
     this.moveItem = function(movingItem, isDownwards)
     {
@@ -41,6 +44,7 @@ function List(listData)
         relayoutItems();
     }
 
+
     this.getItems = function()
     {
         let copiedItems = [];
@@ -48,6 +52,7 @@ function List(listData)
 
         return copiedItems;
     }
+
 
     this.getRepresentingListItem = function(jQueryObject)
     {
@@ -58,7 +63,16 @@ function List(listData)
         return null;
     }
 
+
     this.getName = () => name;
+
+
+    this.setName = function(nameString)
+    {
+        name = nameString;
+        jQueryElement.find(".listTitleText > span").text(nameString);
+    }
+
 
     this.getDataObject = function()
     {
@@ -69,7 +83,9 @@ function List(listData)
         return dataObject;
     }
 
+
     this.represents = (jQueryListObject) => jQueryElement.is(jQueryListObject);
+    
     this.navigationItemRepresents = (jQueryListObject) => navigationItem.represents(jQueryListObject);
 
     this.includesItemName = function(name)
@@ -80,6 +96,7 @@ function List(listData)
         }
         return false;
     }
+
 
     let relayoutItems = function()
     {
@@ -109,6 +126,7 @@ function List(listData)
 	}
 }
 
+
 List.getRepresentative = function(jQueryObject)
 {
     for(let possiblyRepresentingList of this.existentLists)
@@ -123,6 +141,7 @@ List.getRepresentative = function(jQueryObject)
     return null;
 }
 
+
 List.handleClickItemMove = function(initiatorDomObject, isDownwards)
 {
     let movingItemJQuery = $(initiatorDomObject).parents(".listItem");
@@ -134,6 +153,7 @@ List.handleClickItemMove = function(initiatorDomObject, isDownwards)
 
     saveCurrentLists(null, notifyAutosaveError);
 }
+
 
 List.handleClickItemDelete = function(initiatorDomObject)
 {
@@ -147,9 +167,78 @@ List.handleClickItemDelete = function(initiatorDomObject)
     saveCurrentLists(null, notifyAutosaveError);
 }
 
+
+List.handleStartRename = function(initiatorDomObject)
+{
+    let initialTrigger = true;
+
+    let listJQuery = $(initiatorDomObject).parents(".list");
+    let renamingList = List.getRepresentative(listJQuery);
+
+    let listTitleContainer = $("button.listTitleText", listJQuery);
+    let keepingClasses = listTitleContainer.prop("class");
+    let replacingTextInput = $("<input type=\"text\">").replaceAll(listTitleContainer);
+    let newClasses = (keepingClasses + " editing");
+    replacingTextInput.prop("class", newClasses);
+
+    replacingTextInput.val(renamingList.getName());
+    replacingTextInput.focus();
+
+    $(document).click(
+        function(event)
+        {   
+            if(($(event.target) != listTitleContainer) && !initialTrigger)
+            {
+                $(document).off("click");            
+                List.handleEndRename(renamingList, replacingTextInput);
+            }
+            initialTrigger = false;
+        });
+
+    $(document).keypress(
+        function(event)
+        {            
+            if((event.which == "\r".charCodeAt(0)) && !initialTrigger)
+            {
+                $(document).off("keypress");
+                List.handleEndRename(renamingList, replacingTextInput);
+            }
+            initialTrigger = false;
+        }
+    )
+}
+
+
+List.handleEndRename = function(renamedList, textInputJQuery)
+{
+    let newListName = textInputJQuery.val();
+
+    let keepingClasses = textInputJQuery.prop("class");
+    let replacingButton = $("<button><span></span></button>").replaceAll(textInputJQuery);
+    replacingButton.prop("class", keepingClasses);
+    replacingButton.removeClass("editing");
+
+    renamedList.setName(newListName);
+
+    saveCurrentLists(null, notifyAutosaveError);
+}
+
+
+List.handleClickDelete = function(initiatorDomObject)
+{
+    let listJQuery = $(initiatorDomObject).parents(".list");
+    let deletingList = List.getRepresentative(listJQuery);
+
+    deletingList.remove();
+
+    saveCurrentLists(null, notifyAutosaveError);
+}
+
+
 List.create = function(listData)
 {
     this.existentLists.push(new List(listData));
 }
+
 
 List.existentLists = [];

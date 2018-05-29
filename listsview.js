@@ -16,4 +16,6 @@ function prepareListsView(listsViewJQuery, username)
 	$("#listCollectionContainer").on("click", ".buttonDown", (event) => List.handleClickItemMove(event.target, true));
 	$("#listCollectionContainer").on("click", ".listAmendmentButton", loadListAmendmentModal);
     $("#listCollectionContainer").on("click", ".listItemDeleteButton", (event) => List.handleClickItemDelete(event.target));
+	$("#listCollectionContainer").on("click", ".listRenameButton", (event) => List.handleStartRename(event.target));
+	$("#listCollectionContainer").on("click", ".listDeleteButton", (event) => List.handleClickDelete(event.target));
 }

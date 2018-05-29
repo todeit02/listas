@@ -1,11 +1,26 @@
 <div class="list col-xs-12 col-sm-6 col-md-6 col-lg-4">
 	<div class="listHeader flexContainer">
-		<div class="listTitleText listItemText flexGrow roundedBorder">
+		<button class="listTitleText listItemText flexGrow roundedBorder">
 			<span></span>
+		</button>
+		<div class="dropdown">
+			<button class="btn menuButton roundedBorder" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-bars fa-2x"></i>
+			</button>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item listRenameButton" href="#">
+					<i class="fas fa-i-cursor"></i> Renombrar
+				</a>
+				<a class="dropdown-item listDeleteButton" href="#">
+					<i class="far fa-trash-alt"></i> Eliminar
+				</a>
+			</div>
 		</div>
+		<!--
 		<button class="menuButton roundedBorder">
 			<i class="fas fa-bars fa-2x"></i>
 		</button>
+		-->
 	</div>
 	
 	<button class="listAmendmentButton navigationButton roundedBorder">
