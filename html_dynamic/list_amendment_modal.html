@@ -1,36 +1,68 @@
 <div id="modal">
-	<form>
-		<h2>Añadir producto a</h2>
-		<h2 id="extendingListName"></h2>
-		<div class="form-group">
-			<label for="amendingProduct">Producto:</label>
-			<input type="text" class="form-control" id="amendingProduct">
-		</div>
-		<div class="flexContainer">
-			<div class="form-group flewGrow">
-				<label for="amendingQuantity">Cantidad:</label>
-				<input type="text" class="form-control" id="amendingQuantity">
+	<div id="modalContent" class="container-fluid">
+		<form>
+			<div class="row">
+				<div class="col">
+					<h2>Añadir producto a</h2>
+					<h2 id="extendingListName"></h2>
+				</div>
 			</div>
-			<div id="amendingUnitContainer" class="form-group">
-				<label for="amendingUnit">Unidad:</label>
-				<select class="form-control" id="amendingUnit">
-					<option>Ud.</option>
-					<option>g</option>
-					<option>l</option>
-				</select>
+			<div class="row">
+				
+				<!-- Product -->
+				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+					<div class="form-group">
+						<label for="amendingProduct">Producto:</label>
+						<input type="text" class="form-control" id="amendingProduct">
+					</div>
+				</div>
+				
+				<!-- Quantity -->
+				<div class="col-xs-8 col-sm-8 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label for="amendingQuantity">Cantidad:</label>
+						<input type="text" class="form-control" id="amendingQuantity">
+					</div>
+				</div>
+				
+				<!-- Unit -->
+				<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+					<div id="amendingUnitContainer" class="form-group">
+						<label for="amendingUnit">Unidad:</label>
+						<select class="form-control" id="amendingUnit">
+							<option>Ud.</option>
+							<option>g</option>
+							<option>l</option>
+						</select>
+					</div>
+				</div>
+
 			</div>
-		</div>
-		<div class="checkbox">
-			<label for="amendingQuantity"><input type="checkbox" disabled> Esconder de otros participantes</label>
-		</div>
-		<p id="amendingErrorMessage"></p>
-		<div class="centeredButtonGroup">
-			<button id="cancelAmendmentButton" type="button" class="btn btn-danger squaredButtonBig">
-				<i class="fas fa-times fa-2x"></i>
-			</button>
-			<button id="confirmAmendmentButton" type="button" class="btn btn-success squaredButtonBig">
-				<i class="fas fa-check fa-2x"></i>
-			</button>
-		</div>
-	</form> 
+
+			<div class="row">
+				<div class="col checkbox">
+					<label for="amendingQuantity"><input type="checkbox" disabled> Esconder de otros participantes</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p id="amendingErrorMessage"></p>
+				</div>
+			</div>
+
+			<!-- Decision buttons -->
+			<div class="row">
+				<div class="col centeredButtonGroup">
+					<button id="cancelAmendmentButton" type="button" class="btn btn-danger squaredButtonBigResponsive">
+						<i class="fas fa-times fa-2x"></i>
+					</button>
+					<button id="confirmAmendmentButton" type="button" class="btn btn-success squaredButtonBigResponsive">
+						<i class="fas fa-check fa-2x"></i>
+					</button>
+				</div>
+			</div>
+
+		</form> 
+	</div>
 </div>

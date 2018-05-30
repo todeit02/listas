@@ -112,10 +112,12 @@ header
 	border-radius: 0.5em;
 }
 
-.squaredButtonBig
+.squaredButtonBigResponsive
 {
-	width: 6em;
-	height: 6em;
+	width: 25vw;
+    height: 25vw;
+    max-width: 6em;
+    max-height: 6em;
 }
 
 .wideButtonFlexible
@@ -136,14 +138,29 @@ header
     padding: 0.5em;
 	position: fixed;
     z-index: 1;
-    left: 25%;
-    top: 25%;
-    width: 50%;
-    height: 50%;
+    left: 0;
+    top: 0;
+    width: 80%;
+	margin: 10%;
     overflow: auto;
     background-color: rgb(255, 193, 7);
     background-color: rgba(255, 193, 7, 0.95);
 }
+
+/*
+#modalContent
+{
+    background-color: rgb(255, 193, 7);
+    background-color: rgba(255, 193, 7, 0.95);
+}
+*/
+
+/*
+#modalSpacer
+{
+	height: 10vw;
+}
+*/
 
 #login
 {
@@ -164,4 +181,15 @@ header
 {
 	border: 1px;
 	margin: 0.5em;	
+}
+
+#titleImage
+{
+	width: 100%;
+}
+
+#titleImageContainer
+{
+	display: flex;
+	align-items: center;
 }
