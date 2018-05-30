@@ -1,7 +1,7 @@
 {
     "lists": [
         {
-            "name": "V\u00edveres del s\u00e1bado",
+            "name": "V\u00edveres del s\u00e1badooooooooooooooooooooooooooooooooooooooooooooooooooooo",
             "items": [
                 {
                     "name": "zanahorias",
@@ -17,6 +17,16 @@
                     "name": "manzanas (golden)",
                     "quantity": "5",
                     "unit": "ud."
+                },
+                {
+                    "name": "algo mas mas mas mas mas mas mas mas mas mas mas mas mas mas mas mas",
+                    "quantity": "1",
+                    "unit": "Ud."
+                },
+                {
+                    "name": "algo massssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+                    "quantity": "",
+                    "unit": "Ud."
                 }
             ]
         },

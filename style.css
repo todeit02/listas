@@ -1,3 +1,7 @@
+body{
+	font-size: 14pt;
+}
+
 footer{
 	text-align: center;
 }
@@ -32,12 +36,17 @@ header
 	padding: 1%;
 }
 
+.listHeader
+{
+	width: 100%;
+}
+
 .listItemName
 {
 	align-items: center;
 	display: flex;
 	text-align: left;
-	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 
@@ -45,6 +54,12 @@ header
 {
 	position: relative;
 	width: 20%;
+}
+
+.listItemText
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .listTitleTextActive
@@ -57,7 +72,7 @@ header
 {
 	text-align: center;
 	font-weight: bold;
-	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 	.listTitleText.inactive
@@ -79,7 +94,8 @@ header
 	text-align: center;
 	vertical-align: middle;
 	width: 100%;
-	word-wrap: break-word;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .navigationItemContainer
@@ -141,6 +157,7 @@ header
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	overflow: hidden;
 }
 
 #listTypeSelector

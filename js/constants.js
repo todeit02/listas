@@ -1,5 +1,3 @@
-const DUMMY_USERNAME = "testuser";
-
 // HTML templates for async loading
 const HTML_DYNAMIC_FOLDER_PATH = "../html_dynamic/";
 const LOGIN_TEMPLATE_PATH = HTML_DYNAMIC_FOLDER_PATH + "login.html";
