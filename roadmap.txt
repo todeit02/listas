@@ -1,2 +1,3 @@
-- relayout own/foreign buttons
-- share list
+- accessibility
+- add list button in xs
+- creation/deletion animations

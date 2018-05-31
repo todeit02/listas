@@ -81,6 +81,7 @@ function tryCreateList(creatingListName)
 	if(creationSucceeded)
 	{
 		$("#modal").remove();
+		saveCurrentLists(null, notifyAutosaveError);
 	}
 	else
 	{

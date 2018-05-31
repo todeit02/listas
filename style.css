@@ -147,21 +147,6 @@ header
     background-color: rgba(255, 193, 7, 0.95);
 }
 
-/*
-#modalContent
-{
-    background-color: rgb(255, 193, 7);
-    background-color: rgba(255, 193, 7, 0.95);
-}
-*/
-
-/*
-#modalSpacer
-{
-	height: 10vw;
-}
-*/
-
 #login
 {
 	padding: 5% 0 5% 0;
