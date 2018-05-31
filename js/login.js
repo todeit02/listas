@@ -1,6 +1,8 @@
 function loadLogin()
 {
-    loadTemplateIntoContainer(LOGIN_TEMPLATE_PATH, "#mainContainer", prepareLogin);
+    let mainContainerSelector = "#mainContainer";
+	$(mainContainerSelector).empty();
+    loadTemplateIntoContainer(LOGIN_TEMPLATE_PATH, mainContainerSelector, prepareLogin);
 }
 
 

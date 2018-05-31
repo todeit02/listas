@@ -21,6 +21,11 @@ header
 	color: rgb(120, 120, 120);
 }
 
+.enableJsNotification
+{
+	text-align: center;
+}
+
 .flexContainer
 {
 	display: flex;
@@ -41,17 +46,25 @@ header
 	width: 100%;
 }
 
+.listItemAmount
+{	
+	align-items: center;
+	display: flex;
+	padding: 0 1%;
+}
+
 .listItemName
 {
 	align-items: center;
 	display: flex;
 	overflow: hidden;
+	padding: 0 1%;
 	text-align: left;
 }
 
-
 .listItemQuantity
 {
+	flex-grow: 1;
 	position: relative;
 	width: 20%;
 }
