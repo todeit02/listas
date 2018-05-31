@@ -29,7 +29,27 @@ function prepareListsView(listsViewJQuery, username)
 	$("#listCollectionContainer").on("click", ".listRenameButton", (event) => List.handleStartRename(event.target));
 	$("#listCollectionContainer").on("click", ".listDeleteButton", (event) => List.handleClickDelete(event.target));
 
-	$("#addListButton").click(loadListCreationModal);
+	$(".addListButton").click(loadListCreationModal);
+}
+
+function updateListCreationButtonLayout()
+{
+	const listNavigation = $("#listNavigation");
+	const listNavigationDom = listNavigation[0];
+
+	let listNavigationVisible = $("#listNavigation").is(":visible");
+	if($("#listNavigation").is(":visible"))
+	{
+		$("#listTypeSelector").removeClass("btn-group-vertical");
+		$("#listTypeSelector").addClass("btn-group");
+		isListTypeSelectorHorizontal = true;
+	}
+	else if (!horizontalSelectorFits && isListTypeSelectorHorizontal)
+	{
+		$("#listTypeSelector").removeClass("btn-group");
+		$("#listTypeSelector").addClass("btn-group-vertical");
+		isListTypeSelectorHorizontal = false;
+	}
 }
 
 

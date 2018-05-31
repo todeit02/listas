@@ -118,6 +118,12 @@ header
 		text-overflow: ellipsis;
 	}
 
+.navigationSmall .navigationButton
+{
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+
 .navigationItemContainer
 {
 	padding: 0.2em;
