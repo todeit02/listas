@@ -1,13 +1,14 @@
 function ListNavigationItem(initialName)
 {
 	// properties
-	let name = initialName;
+	let name;
 	let jQueryElement;
 
 	this.setName = function(settingName)
 	{
 		name = settingName;
-		$(".navigationButton", jQueryElement).text(settingName);
+		$("a", jQueryElement).text(settingName);
+		$("a", jQueryElement).prop("href", "#" + settingName);
 	}
 
 	this.remove = function()
@@ -19,5 +20,5 @@ function ListNavigationItem(initialName)
 
 	// constructor implementation
 	jQueryElement = this.template.clone().appendTo("#listNavigationContainer");
-	$(".navigationButton", jQueryElement).text(name);
+	this.setName(initialName);
 }

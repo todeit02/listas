@@ -1,11 +1,13 @@
-<div class="listItem flexContainer">
+<div class="listItem flexContainer" role="listitem">
 	<div class="listItemMovers">
-		<button type="button" class="btn buttonUp">
-			<i class="fas fa-angle-up"></i>
+		<button type="button" class="btn buttonUp roundedBorder tooltipCarrier" aria-labelledby="moveItemUpButtonTooltip">
+			<i class="fas fa-angle-up" role="presentation"></i>
+			<span id="moveItemUpButtonTooltip" class="tooltip">Mueve entrada arriba</span>
 		</button>
 		<br />
-		<button type="button" class="btn buttonDown">
-			<i class="fas fa-angle-down"></i>
+		<button type="button" class="btn buttonDown roundedBorder tooltipCarrier" aria-labelledby="moveItemDownButtonTooltip">
+			<i class="fas fa-angle-down" role="presentation"></i>
+			<span id="moveItemDownButtonTooltip" class="tooltip">Mueve entrada abajo</span>
 		</button>
 	</div>
 	
@@ -19,8 +21,9 @@
 	</div>
 	
 	<div>
-		<button type="button" class="btn listItemDeleteButton">
-			<i class="fas fa-times"></i>
+		<button type="button" class="btn listItemDeleteButton roundedBorder tooltipCarrier" aria-labelledby="deleteItemButtonTooltip">
+			<i class="fas fa-times" role="presentation"></i>
+			<span id="deleteItemButtonTooltip" class="tooltip">Elimina entrada</span>
 		</button>
 	</div>
 </div>

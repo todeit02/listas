@@ -54,11 +54,13 @@
 			<!-- Decision buttons -->
 			<div class="row">
 				<div class="col centeredButtonGroup">
-					<button id="cancelAmendmentButton" type="button" class="btn btn-danger squaredButtonBigResponsive">
-						<i class="fas fa-times fa-2x"></i>
+					<button id="cancelAmendmentButton" type="button tooltipCarrier" class="btn btn-danger squaredButtonBigResponsive" aria-labelledby="cancelAmendmentButtonTooltip">
+						<i class="fas fa-times fa-2x" role="presentation"></i>
+						<span id="cancelAmendmentButtonTooltip" class="tooltip">Cancela añadidura</span>
 					</button>
-					<button id="confirmAmendmentButton" type="button" class="btn btn-success squaredButtonBigResponsive">
-						<i class="fas fa-check fa-2x"></i>
+					<button id="confirmAmendmentButton" type="button tooltipCarrier" class="btn btn-success squaredButtonBigResponsive" aria-labelledby="confirmAmendmentButtonTooltip">
+						<i class="fas fa-check fa-2x" role="presentation"></i>
+						<span id="confirmAmendmentButtonTooltip" class="tooltip">Confirma añadidura</span>
 					</button>
 				</div>
 			</div>

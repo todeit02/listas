@@ -1,0 +1,704 @@
+{
+	"lists": [
+		{
+			"name": "Víveres del sábado",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 2",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 2",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 3",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 3",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 4",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 4",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 5",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 5",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 6",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 6",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 7",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 7",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 8",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 8",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 9",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 9",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 10",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 10",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 11",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 11",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 12",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 12",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 13",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 13",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		},
+		{
+			"name": "Víveres del sábado 14",
+			"items": [
+				{
+					"name": "zanahorias",
+					"quantity": "800",
+					"unit": "g"
+				},
+				{
+					"name": "harina",
+					"quantity": "2000",
+					"unit": "g"
+				},
+				{
+					"name": "manzanas (golden)",
+					"quantity": "5",
+					"unit": "ud."
+				}
+			]
+		},
+		{
+			"name": "Fiesta del domingo 14",
+			"items": [
+				{
+					"name": "coca-cola",
+					"quantity": "7",
+					"unit": "l"
+				},
+				{
+					"name": "agua con gas",
+					"quantity": "3",
+					"unit": "l"
+				},
+				{
+					"name": "cacahuetes",
+					"quantity": "600",
+					"unit": "g"
+				},
+				{
+					"name": "cerveza (marca A)",
+					"quantity": "5",
+					"unit": "l"
+				},
+				{
+					"name": "cerveza (marca B)",
+					"quantity": "3",
+					"unit": "l"
+				}
+			]
+		}
+	]
+}

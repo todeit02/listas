@@ -1,18 +1,25 @@
 <div id="modal">
+	<h2>Crear otra lista</h2>
 	<form>
-		<h2>Crear otra lista</h2>
 		<div class="form-group">
 			<label for="creatingListName">Nombre:</label>
 			<input type="text" class="form-control" id="creatingListName">
 		</div>
-		<p id="creationErrorMessage"></p>
-		<div class="centeredButtonGroup">
-			<button id="cancelCreationButton" type="button" class="btn btn-danger squaredButtonBigResponsive">
-				<i class="fas fa-times fa-2x"></i>
-			</button>
-			<button id="confirmCreationButton" type="button" class="btn btn-success squaredButtonBigResponsive">
-				<i class="fas fa-check fa-2x"></i>
-			</button>
-		</div>
 	</form> 
+	<p id="creationErrorMessage"></p>
+	<div class="centeredButtonGroup">
+
+		<button id="cancelCreationButton" type="button" class="btn btn-danger squaredButtonBigResponsive tooltipCarrier"
+		aria-labelledby="cancelCreationButtonTooltip">
+			<i class="fas fa-times fa-2x" role="presentation"></i>
+			<span id="cancelCreationButtonTooltip" class="tooltip">Cancela creación</span>
+		</button>
+
+		<button id="confirmCreationButton" type="button" class="btn btn-success squaredButtonBigResponsive tooltipCarrier"
+		aria-labelledby="confirmCreationButtonTooltip">
+			<i class="fas fa-check fa-2x" role="presentation"></i>
+			<span id="confirmCreationButtonTooltip" class="tooltip">Confirma creación</span>
+		</button>
+		
+	</div>
 </div>

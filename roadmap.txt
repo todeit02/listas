@@ -1,3 +1,5 @@
 - accessibility
+	* message for blocked scripts
+	* keyboard shortcuts
 - add list button in xs
 - creation/deletion animations

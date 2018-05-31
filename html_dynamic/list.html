@@ -4,25 +4,28 @@
 			<span></span>
 		</button>
 		<div class="dropdown">
-			<button class="btn menuButton roundedBorder" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<i class="fas fa-bars fa-2x"></i>
+			<button class="btn menuButton roundedBorder tooltipCarrier" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+			 role="menu" aria-haspopup="true" aria-expanded="false">			
+				<i class="fas fa-bars fa-2x" role="presentation"></i>
+				<span id="dropdownMenuButtonTooltip" class="tooltip">Menú</span>
 			</button>
-			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-				<div class="dropdown-item listRenameButton" href="#">
-					<i class="fas fa-i-cursor"></i> Renombrar
+			<div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenuButton">
+				<div class="dropdown-item listRenameButton" role="menuitem">
+					<i class="fas fa-i-cursor" role="presentation"></i> Renombrar
 				</div>
-				<div class="dropdown-item listDeleteButton" href="#">
-					<i class="far fa-trash-alt"></i> Eliminar
+				<div class="dropdown-item listDeleteButton" role="menuitem">
+					<i class="far fa-trash-alt" role="presentation"></i> Eliminar
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<button class="listAmendmentButton navigationButton roundedBorder">
-		<i class="fas fa-plus-circle fa-2x"></i>
+	<button class="listAmendmentButton navigationButton roundedBorder tooltipCarrier" aria-labelledby="listAmendmentButtonTooltip">
+		<i class="fas fa-plus-circle fa-2x" role="presentation"></i>
+		<span id="listAmendmentButtonTooltip" class="tooltip">Agrega entrada</span>
 	</button>
 	
-	<div class="listItemContainer">
-		<!-- Ajax load list elements in here -->
+	<div class="listItemContainer" role="list">
+		<!-- AJAX loads list elements into here -->
 	</div>
 </div>

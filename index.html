@@ -16,13 +16,15 @@
 				<div class="flexGrow">
 					<h1>Lista de Compras Conectada</h1>
 				</div>
-				<button class="menuButton roundedBorder">
-					<i class="fas fa-wrench"></i>
+				<button id="mainMenuButton" class="menuButton roundedBorder tooltipCarrier" aria-labelledBy="mainMenuButtonTooltip">
+					<i class="fas fa-wrench" role="presentation"></i>
+					<span id="mainMenuButtonTooltip" class="tooltip">menú principal</span>
 				</button>
 			</div>
 		</header>
 
-		<div id="mainContainer" class="container-fluid">			
+		<div id="mainContainer" class="container-fluid">
+			<!-- AJAX loads pages into here -->			
 		</div>
 		
 		<footer class="bg-warning">

@@ -18,13 +18,14 @@
 					<label for="password">Contraseña:</label>
 					<input type="text" class="form-control" id="password" disabled>
 				</div>
-				<p id="loginErrorMessage"></p>
-				<div class="centeredButtonGroup">
-					<button id="loginButton" type="button" class="btn btn-success wideButtonFlexible">
-						<i class="fas fa-sign-in-alt fa-2x"></i>
-					</button>
-				</div>
 			</form> 
+			<p id="loginErrorMessage"></p>
+			<div class="centeredButtonGroup">
+				<button id="loginButton" type="button" class="btn btn-success wideButtonFlexible tooltipCarrier" aria-labelledby="loginButtonTooltip">
+					<i class="fas fa-sign-in-alt fa-2x" role="presentation"></i>
+					<span id="loginButtonTooltip" class="tooltip">Agrega otra lista</span>
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
